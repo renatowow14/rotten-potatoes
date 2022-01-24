@@ -42,7 +42,7 @@ jobs:
           kubeconfig: ${{ secrets.K8S_KUBECONFIG}}  
 
       - name: Deploy to Kubernetes Cluster
-        uses: Azure/k8s-set-context@v1.1
+        uses: Azure/k8s-deploy@v1.3
         with:
           image: renatogomes256/rotten-potatoes:${{ github.run_number}}
           manifests: |
